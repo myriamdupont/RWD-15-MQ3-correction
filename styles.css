@@ -1,0 +1,74 @@
+/* Lorsque la taille de fenêtre est inférieure ou égale à 640px, le bloc entier de navigation doit se positionner sous le footer */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 8px;
+	background-color: #fff;
+	color: #000;
+	font-family: "Century Gothic", helvetica, arial, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.5;
+}
+
+header,
+footer,
+[id=main],
+nav {
+	color: #fff;
+	padding: 10px;
+	margin: 0 0 1em;
+	background: hotpink;
+	border-radius: 6px
+}
+
+header {
+	background: orange
+}
+
+[id=main] {
+	background: maroon
+}
+
+footer {
+	background: gray;
+	padding: 10px;
+}
+
+a {
+	color: #fff;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	padding: 8px 12px;
+	background: rgba(0, 0, 0, .2);
+	border-radius: 6px
+}
+
+@media (max-width: 640px) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	nav {
+		order: 1;
+	}
+	nav li,
+	nav a {
+		display: block;
+	}
+	nav li + li {
+		margin-top: 2px;
+	}
+}
